@@ -1,0 +1,25 @@
+:host {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: lightseagreen;
+  font-size: 30px;
+  height: 30px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid lightseagreen;
+}
+
+#content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
