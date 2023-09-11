@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit, Input, ViewContainerRef } from '@angular/core';
 import Pet from 'src/app/models/Pet';
 import Cat from 'src/app/models/Cat';
 import Dog from 'src/app/models/Dog';
@@ -15,7 +15,6 @@ export class MemberItemComponent implements OnInit {
 
   constructor(
     private viewContainerRef: ViewContainerRef,
-    private componentFactoryResolver: ComponentFactoryResolver,
   ) { }
 
   ngOnInit(): void {
@@ -23,12 +22,10 @@ export class MemberItemComponent implements OnInit {
     const cat = this.member as Cat;
     const dog = this.member as Dog;
     if (cat.favoriteComfyPlace) {
-      const catComponentFactory = this.componentFactoryResolver.resolveComponentFactory(CatItemComponent);
-      const componentRef = this.viewContainerRef.createComponent(catComponentFactory);
+      const componentRef = this.viewContainerRef.createComponent(CatItemComponent);
       componentRef.instance.member = cat;
     } else if (dog.favoritePark) {
-      const dogComponentFactory = this.componentFactoryResolver.resolveComponentFactory(DogItemComponent);
-      const componentRef = this.viewContainerRef.createComponent(dogComponentFactory);
+      const componentRef = this.viewContainerRef.createComponent(DogItemComponent);
       componentRef.instance.member = dog;
     }
   }

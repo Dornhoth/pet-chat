@@ -1,4 +1,4 @@
-#card {
+.card {
   border: 1px solid darkgray;
   border-radius: 3px;
   margin-bottom: 10px;
@@ -14,19 +14,20 @@ img {
   height: 50px;
 }
 
- #info {
-   display: flex;
-   flex-direction: column;
-   margin-left: 10px;
- }
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
 
-#name {
+.name {
   font-size: 1.1em;
   font-weight: bold;
   color: lightseagreen;
 }
 
-#age, #favoriteComfyPlace {
+.age,
+.favorite-comfy-place {
   font-size: 0.9em;
   color: rgb(71, 68, 68);
 }

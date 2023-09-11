@@ -18,10 +18,6 @@ import { MemberItemComponent } from './components/member-item-container/member-i
   imports: [
     BrowserModule
   ],
-  entryComponents: [
-    DogItemComponent,
-    CatItemComponent,
-  ],
   providers: [],
   bootstrap: [AppComponent]
 })
